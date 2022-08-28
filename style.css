@@ -14,17 +14,24 @@ a {
   text-decoration: none;
 }
 div ul {
-  border-right: solid 3px gray;
   margin: 0px;
   padding:20px;
-  height: 500px;
   list-style:none;
 }
 #main_grid {
   display: grid;
   grid-template-columns: 150px 1fr;
-  gri
 }
 #main_text{
-  margin:20px;
+  border-left: solid 3px gray;
+  padding:20px;
+}
+@media (max-width:800px) {
+  #main_grid{
+    display:block;
+  }
+  #main_text{
+    border-left:none;
+    border-top: solid 3px gray;
+  }
 }
