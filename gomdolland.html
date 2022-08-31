@@ -4,6 +4,32 @@
     <title>곰돌랜드</title>
     <meta charset='utf-8'>
     <link rel='stylesheet' href='style.css'>
+    <script>
+      function night_day_handler(self){
+        if (self.value==='night'){
+          document.querySelector('body').style.backgroundColor='black';
+          document.querySelector('body').style.color='white';
+          var a_list = document.querySelectorAll('a');
+          var i = 0;
+          while (i < a_list.length){
+            a_list[i].style.color = 'powderblue'
+            i = i + 1;
+          }
+          self.value='day';
+        }
+        else{
+          document.querySelector('body').style.backgroundColor='white';
+          document.querySelector('body').style.color='black';
+          var a_list = document.querySelectorAll('a');
+          var i = 0;
+          while (i < a_list.length){
+            a_list[i].style.color = 'blue'
+            i = i + 1;
+          }
+          self.value='night';
+        }
+      }
+  </script>
   </head>
 
   <body>
@@ -11,15 +37,22 @@
     <div id='main_grid'>
       <div>
         <ul>
-          <li><a href='gomdol_1.html'>1. 곰돌1</a></li>
-          <li><a href='gomdol_2.html'>2. 곰돌2</a></li>
-          <li><a href='gomdol_3.html'>3. 곰돌3</a></li>
+          <script>
+            var main_index = ['곰돌 1', '곰돌 2', '곰돌 3'];
+            var main_index_link = ['gomdol_1.html', 'gomdol_2.html', 'gomdol_3.html'];
+            var i = 0;
+            while (i<main_index.length){
+              document.write('<li><a href='+main_index_link[i]+'>'+main_index[i]+'</a></li>')
+              i = i + 1;
+            }
+          </script>
       </div>
       <div id='main_text'>
         <img src='tenor.gif' width='50%'>
-        <p style='margin:0px'>곰돌 메인</p>
+        <p style='margin:0px'>곰돌 랜드</p>
       </div>
     </div>
+    <input type="button" value="night" onclick=night_day_handler(this)>
     <!--
       <p>
       이 내용은 무시됨

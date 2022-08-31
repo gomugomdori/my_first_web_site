@@ -10,8 +10,7 @@ h1 {
   display:block;
 }
 a {
-  color:black;
-  text-decoration: none;
+  text-decoration: underline;
 }
 div ul {
   margin: 0px;
